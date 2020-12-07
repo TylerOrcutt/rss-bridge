@@ -1,7 +1,7 @@
 <?php
 class IMDBListBridge extends BridgeAbstract {
 		
-	const MAINTAINER="yourmom";
+	const MAINTAINER="ty";
 	const NAME = "IMDB Lists";
 	const URI = "https://www.imdb.com";
 	const DESCRIPTION = "returns w/e list from imdb";
@@ -23,11 +23,7 @@ class IMDBListBridge extends BridgeAbstract {
 			'?st_dt=&mode=detail&page=1&ref_=ttls_vm_dtl&title_type=movie&sort=list_order,asc';
 
 		$item = array();
-		$item['title'] = 'test';
-		$item['uri'] = $url;
-		$this->items[] = $item;
 		
-	//	echo '$url';
 		$html = getSimpleHTMLDOM(
 			$url) or returnServerError('Could request IMDB');
 
